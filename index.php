@@ -1,85 +1,46 @@
 <?
 
-echo "GeneseeValleyRetreat.com coming soon";
+$index_temp = "valid";
 
-Objective: To immerse users in the experience, tell the story of the land, and drive bookings for high-value stays, events, and workshops. The design should be stunning, photo-rich, and evocative.
+// if !($_SESSION['csv_contents'])):
+//	$csv_contents = file_get_contents('https://docs.google.com/spreadsheets/d/e/2PACX-1vT2qh0dMlZ6gI8aEqqMjQt6ZS6U-sYOX3AKOHz1ajVgiJ0PfiNAQpp5B1-a8yAZ-e81DPMCs-b-aS8H/pub?output=csv');
+//	$_SESSION['csv_contents'] = $csv_contents;
+//	endif;
 
-Main Navigation:
+// print_r($csv_contents);
 
-Home
+$url_array = [];
+$url_array_raw = explode("/",$_SERVER['REQUEST_URI']);
+foreach ($url_array_raw as $key_temp => $url_temp):
+	if ($key_temp == 0): continue; endif;
+	if ($key_temp > 4): break; endif;
+	if (empty($url_temp)): continue; endif;
+	$url_array[] = $url_temp;
+	endforeach;
 
-Hero section with breathtaking video/images of the valley and property.
+include_once('functions.php');
 
-Clear, concise value proposition (e.g., "A private nature retreat in the heart of the Lost Sierra").
+// if (empty($url_array[0])):
+if ($url_array[0] == "testing"):
+	include_once('index_home.php');
+	exit;
+elseif (in_array($url_array[0], ['style_global.css', 'style_transitions.css'])):
+	include_once(str_replace('.css', '.php', $url_array[0]));
+	header('Content-type: text/css');
+	echo css_process($css_array);
+	exit;
+elseif ($url_array[0] == "photo"):
+	include_once('index_photo.php');
+	exit;
+elseif ($url_array[0] == "about"):
+	include_once('index_about.php');
+	exit;
+elseif ($url_array[0] == "shop"):
+	include_once('index_shop.php');
+	exit;
+	endif;
 
-Visually engaging sections leading to key offerings (Stays, Weddings, Workshops).
-
-A section on the Food Forest philosophy.
-
-High-quality testimonials.
-
-Accommodations (or Stays)
-
-Glamping: Detailed page with photos, amenities, pricing, and booking calendar.
-
-The Lost Sierra Cabins (Future): A "Coming Soon" page to build anticipation for future, higher-end accommodations.
-
-Retreat Packages: Curated packages (e.g., "3-Day Wellness Escape," "Creative Immersion").
-
-Weddings & Events
-
-Weddings: A romantic, photo-heavy page with galleries, testimonials from couples, and a clear call-to-action to inquire.
-
-Corporate & Group Retreats: A more professional page outlining facilities, activities (team-building), and catering options.
-
-Our Venues: A gallery page showcasing different locations on the property (The Meadow, The Creek Beach, The Barn).
-
-Event Inquiry Form: A detailed form to capture leads for all events.
-
-Workshops & Experiences
-
-Workshop Calendar: An up-to-date calendar of all classes and events.
-
-Signature Workshops:
-
-Regenerative Agriculture & Food Forestry
-
-Wildcrafting & Foraging (Morels, Medicinal Plants)
-
-Creative Arts (Smoke Drawings, Wire Sculptures)
-
-Private Guiding & Tours: Information on booking property tours, tastings, or guided hikes.
-
-The Creek Beach: Page for booking day-use reservations.
-
-Our Story (or The Land)
-
-About Us: The family's personal story and connection to the land.
-
-A Valley Reborn: The story of the Genesee Valley, the Lost Sierra, and the healing of the burn scar.
-
-The Food Forest: A page dedicated to the philosophy and beauty of the four-acre garden.
-
-Sustainability: Details on your practices (biochar, water conservation, etc.).
-
-Gallery
-
-A visually stunning, filterable gallery (e.g., filter by Glamping, Weddings, The Land).
-
-Contact & Book
-
-Contact form, map, directions, and direct links to booking pages.
-
-Footer Navigation:
-
-FAQ (Frequently Asked Questions)
-
-Blog / Journal (for storytelling and SEO)
-
-Press & Media Inquiries
-
-Privacy Policy / Terms of Service
-
-[Important Link] Visit Our Farm Store → (This links directly to geneseevalley.farm)
+include_once('index_404.php');
+exit;
 
 ?>
