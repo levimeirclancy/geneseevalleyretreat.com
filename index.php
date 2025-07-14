@@ -2,7 +2,6 @@
 
 echo "GeneseeValleyRetreat.com coming soon";
 
-
 Objective: To immerse users in the experience, tell the story of the land, and drive bookings for high-value stays, events, and workshops. The design should be stunning, photo-rich, and evocative.
 
 Main Navigation:
