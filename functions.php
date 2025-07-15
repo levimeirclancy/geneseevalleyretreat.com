@@ -9,17 +9,14 @@ function html_begin ($title="Ziolicious", $style_array = []) {
 	$html_temp .= '<head>';
 	$html_temp .= '<meta charset="UTF-8">';
 	$html_temp .= '<meta name="viewport" content="width=device-width, initial-scale=1.0">';
-	$html_temp .= '<title>Ziolicious</title>';
+	$html_temp .= '<title>Genesee Valley Retreat</title>';
 	
 	// FONTS
 	$html_temp .= '<link rel="preconnect" href="https://fonts.googleapis.com">';
 	$html_temp .= '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>';
 	$html_temp .= '<link href="https://fonts.googleapis.com/css2';
-	$html_temp .= '?family=Monoton';
-	$html_temp .= '&family=Tilt+Warp';
-	$html_temp .= '&family=Rubik+Mono+One';
-//	$html_temp .= '&family=Secular+One';
-//	$html_temp .= '&family=Solitreo';
+	$html_temp .= '?family=Playfair+Display';
+	$html_temp .= '&family=Lato';
 	$html_temp .= '&display=swap" rel="stylesheet">';
 	
 	$html_temp .= '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=download">';
