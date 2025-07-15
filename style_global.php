@@ -1,15 +1,16 @@
 <?
 
-$heading_font = "'Tilt Warp'";
-$body_font = "'Georgia', serif";
-$search_font = "'Helvetica'";
-$hashtag_heading_font = "Monoton, sans-serif";
-$hashtag_general_font = "'Rubik Mono One', sans-serif";
+$heading_font = "'Playfair Display', serif";
+$body_font = "'Lato', sans serif";
+// $search_font = "'Helvetica'";
 
-$dark_color		= "rgb(15,15,15)";
-$light_color		= "rgb(235,235,235)";
-$logo_color_primary	= "rgba(30, 175, 200, 1)";
-$logo_color_secondary	= "rgba(0, 15, 195, 1)";
+$light_color		= "rgb(245, 241, 235)"; // linen color
+$dark_color		= "rgb(54, 54, 54)"; // charcoal gray
+
+$cold_color		= "rgb(124, 138, 125)"; // sage
+$warm_color		= "rgb(194, 139, 110"; // terracotta
+
+$highlight_color	= "rgb(184, 138, 70)"; // warm gold
 
 $css_array = [
 
@@ -50,7 +51,7 @@ $css_array = [
  	"font-size"			=> "1.8em",
 	"line-height"			=> "1.6em",
 	"font-weight"			=> "bold",
-	"background"			=> "linear-gradient(45deg, ".$logo_color_primary." 20%, ".$logo_color_secondary.")",
+	"background"			=> "linear-gradient(45deg, ".$dark_color." 20%, ".$warm_color.")",
 	"-webkit-background-clip"	=> "text",
 	"color"				=> "transparent",
 	],
@@ -70,22 +71,26 @@ $css_array = [
 	"color"				=> $dark_color,
 	],
 
-".body-tagline-primary-color, .body-tagline-secondary-color" => [
-	"background"			=> "linear-gradient(-200deg, ".$logo_color_primary." 40%, ".$logo_color_secondary.")",
+".body-tagline-colorized" => [
+	"background"			=> "linear-gradient(-200deg, ".$dark_color." 40%, ".$cold_color.")",
 	"-webkit-background-clip"	=> "text",
  	"color"				=> "transparent",
 	],
 
-".body-tagline-description" => [
-	"font-size"			=> "1.3em",
-	"opacity"			=> "0.7",
-	"clear"				=> "both",
-	"display"			=> "inline-block",
-	"max-width"			=> "700px",
-	"padding"			=> "0 30px",
-	"margin"			=> "0 auto 80px",
+".body-statement" => [
+	"display"			=> "block",
+	"max-width"			=> "400px",
+	"margin"			=> "200px auto 20px",
 	"text-align"			=> "center",
-	"letter-spacing"		=> "0",
+	"Font-size"			=> "3em",
+	"font-family"			=> $heading_font,
+	"color"				=> $dark_color,
+	],
+
+".body-statement-one, .body-statement-two, .body-statement-three" => [
+	"background"			=> "linear-gradient(-200deg, ".$dark_color." 40%, ".$cold_color.")",
+	"-webkit-background-clip"	=> "text",
+ 	"color"				=> "transparent",
 	],
 
 "main" => [
