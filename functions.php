@@ -31,12 +31,17 @@ function html_begin ($title="Ziolicious", $style_array = []) {
 	
 	$html_temp .= '<header>';
 	$html_temp .= '<span class="header-logo"><a href="/testing/">Ziolicious</a></span>';
-//	$html_temp .= '<div class="search-box-container">';
-//		$html_temp .= '<input class="search-box" type="text" placeholder="&#x1F50D;  Search">';
-//		$html_temp .= '</div>';
 	$html_temp .= '</header>';
 
 	$html_temp .= '<nav>';
+	// Home
+	// Accomodations
+	// Weddings & Events
+	// Workshops & Experiences
+	// Our Story
+	// Gallery
+	// Contact & Book
+
 	$html_temp .= '</nav>';
 	
 	return $html_temp; }
@@ -47,9 +52,13 @@ function html_end() {
 	$html_temp .= '<footer>';
 		$html_temp .= '<a href="#">Instagram</a>';
 		$html_temp .= '<a href="#">X (Twitter)</a>';
-		$html_temp .= '<a href="#">Email</a>';
-	 	$html_temp .= '<a href="#">Advertise</a>';
 	 	$html_temp .= '<a href="#">hello@ziolicious.com</a>';
+
+		//  FAQ (Frequently Asked Questions)
+		// Blog / Journal (for storytelling and SEO)
+		// Press & Media Inquiries
+		// Privacy Policy / Terms of Service
+
 		$html_temp .= '</footer>';
 	$html_temp .= '</body>';
 	$html_temp .= '</html>';
